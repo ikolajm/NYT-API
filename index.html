@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NY Times API</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Playfair+Display+SC" rel="stylesheet">
+    <!-- Semantic -->
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css' rel="stylesheet">
+    <link href="nyt.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+        <h1>New York Times Article Search</h1>
+        <div class="controls">
+        <!--Search Form-->
+        <form>
+            <div class="input-container">
+                <span>
+                    <label for="search">Enter a SINGLE term (required): </label>
+                    <input type="text" id="search" class="search" required>
+                </span>
+                <span>
+                    <label for="start-date">Start date: </label>
+                    <input type="date" id="start-date" class="start-date" pattern="[0-9]{8}">
+                </span>
+                <span>
+                    <label for="end-date">End date: </label>
+                    <input type="date" id="end-date" class="end-date" pattern="[0-9]{8}">
+                </span>
+            </div>
+            <span>
+            <button class="ui button submit">Submit Search</button>
+            </span>
+        </form>
+        </div>
+    </header>
+
+    <div class="wrapper">
+      <!--Results Section-->
+      <div class="results">
+        <!--Results Navigation-->
+        <nav>
+          <button class="ui button prev">Previous 10</button>
+          <button class="ui button next">Next 10</button>
+        </nav>
+        <!--Results From Request-->
+        <section class="background">
+
+        </section>
+
+        <!-- Results Navigation BOTTOM NAV
+        <nav>
+            <button class="btn btn-secondary btn-sm prev">Previous 10</button>
+            <button class="btn btn-secondary btn-sm next">Next 10</button>
+        </nav> -->
+
+      </div>
+    </div>
+    <script type="text/javascript" src="nyt.js"></script>
+  </body>
+</html>
